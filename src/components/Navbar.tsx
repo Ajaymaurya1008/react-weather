@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    localStorage.setItem("darkMode", isDarkMode);
+    localStorage.setItem("darkMode", isDarkMode.toString());
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -49,7 +49,7 @@ const Navbar = () => {
         </span>
         Weather
       </a>
-      <input type="checkbox" className="peer hidden" id="navbar-open" />
+      <input title="input" type="checkbox" className="peer hidden" id="navbar-open" />
       <label
         className="absolute top-5 right-7 cursor-pointer md:hidden"
         htmlFor="navbar-open"
@@ -76,6 +76,7 @@ const Navbar = () => {
         <ul className="flex flex-col items-center space-y-2 md:ml-auto md:flex-row md:space-y-0">
           <li className="md:mr-12 flex justify-center items-center relative">
             <input
+              title="input"
               className="toggle"
               type="checkbox"
               checked={isDarkMode}

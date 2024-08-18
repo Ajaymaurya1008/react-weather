@@ -13,7 +13,7 @@ export default function Home() {
       "https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png",
   });
 
-  const handleWeather = async (e) => {
+  const handleWeather = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const res = await axios.get(
