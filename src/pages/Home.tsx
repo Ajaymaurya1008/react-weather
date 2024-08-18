@@ -17,7 +17,7 @@ export default function Home() {
     e.preventDefault();
     try {
       const res = await axios.get(
-        `https://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${city}&aqi=yes`,
+        `https://api.weatherapi.com/v1/current.json?key=${(import.meta as any).env.VITE_WEATHER_API_KEY}&q=${city}&aqi=yes`,
       );
       const data = res.data;
       if (data) {
